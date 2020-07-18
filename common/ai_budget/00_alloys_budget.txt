@@ -1,0 +1,225 @@
+## Categories used in this file must have use_for_ai_budget = yes defined in economic_categories ##
+## It is possible to have multiple entries with the same category and resource ##
+
+#################
+## Expenditure ##
+#################
+alloys_expenditure_buffer = { # Buffer, will not be spent
+	resource = alloys
+	type = expenditure
+	category = buffer
+
+	potential = {
+		always = no
+	}
+
+	fraction = {
+		weight = 0.0
+	}
+}
+
+alloys_expenditure_ships = {
+	resource = alloys
+	type = expenditure
+	category = ships
+
+	potential = {
+		OR = {
+			ai_colonize_plans = 0
+			is_at_war = yes
+		}
+	}
+
+	fraction = {
+		weight = 0.6
+	}
+}
+
+alloys_expenditure_ship_upgrades = {
+	resource = alloys
+	type = expenditure
+	category = ship_upgrades
+
+	potential = {
+		is_at_war = no
+		used_naval_capacity_percent >= 0.5
+		OR = {
+			ai_colonize_plans = 0
+			is_at_war = yes
+		}
+	}
+
+	fraction = {
+		weight = 0.3
+	}
+}
+
+alloys_expenditure_planets = {
+	resource = alloys
+	type = expenditure
+	category = planets
+
+	potential = {
+		always = yes
+	}
+
+	fraction = {
+		weight = 0.1
+	}
+
+	static_max = {
+		base = 450
+	}
+}
+
+alloys_expenditure_starbases = {
+	resource = alloys
+	type = expenditure
+	category = starbases
+
+	potential = {
+		OR = {
+			ai_colonize_plans = 0
+			is_at_war = yes
+		}
+	}
+
+	fraction = {
+		weight = 0.05
+	}
+	
+	static_min = {
+		base = 7500
+	}
+}
+
+alloys_expenditure_starbases_expand = {
+	resource = alloys
+	type = expenditure
+	category = starbases
+
+	potential = {
+		always = yes
+	}
+
+	fraction = {
+		weight = 0.05
+	}
+	
+	static_min = {
+		base = 150
+	}
+}
+
+alloys_expenditure_colonies = {
+	resource = alloys
+	type = expenditure
+	category = colonies
+
+	potential = {
+		ai_colonize_plans > 0
+	}
+
+	fraction = {
+		weight = 0
+	}
+
+	static_min = {
+		base = 450
+	}
+
+	static_max = {
+		base = 450
+	}
+}
+
+alloys_expenditure_megastructures = {
+	resource = alloys
+	type = expenditure
+	category = megastructures
+
+	potential = {
+		is_country_type = default
+		is_at_war = no
+		can_build_megastructures = yes
+	}
+
+	fraction = {
+		weight = 0.4
+
+		# increase budget if megastructures are unfinished
+		modifier = {
+			factor = 3
+			any_owned_megastructure = {
+				NOR = {
+					is_megastructure_type = dyson_sphere_5
+					is_megastructure_type = dyson_sphere_restored
+					is_megastructure_type = spy_orb_4
+					is_megastructure_type = spy_orb_restored
+					is_megastructure_type = think_tank_4
+					is_megastructure_type = think_tank_restored
+					is_megastructure_type = gateway_final
+					is_megastructure_type = gateway_restored
+					is_megastructure_type = matter_decompressor_4
+					is_megastructure_type = matter_decompressor_restored
+					is_megastructure_type = strategic_coordination_center_3
+					is_megastructure_type = strategic_coordination_center_restored
+					is_megastructure_type = mega_art_installation_3
+					is_megastructure_type = mega_art_installation_restored
+					is_megastructure_type = interstellar_assembly_4
+					is_megastructure_type = interstellar_assembly_restored
+					is_megastructure_type = lgate_base
+				}
+			}
+		}
+	}
+
+	static_max = {
+		base = 20000 # current max alloy cost for a stage
+	}
+}
+
+############
+## Upkeep ##
+############
+alloys_upkeep_buffer = {	# Buffer, will not be spent
+	resource = alloys
+	type = upkeep
+	category = buffer
+
+	potential = {
+		always = yes
+	}
+
+	fraction = {
+		weight = 0.3
+	}
+}
+
+alloys_upkeep_ships = {
+	resource = alloys
+	type = upkeep
+	category = ships
+
+	potential = {
+		always = yes
+	}
+
+	fraction = {
+		weight = 0.5
+	}
+}
+
+alloys_upkeep_planets = {
+	resource = alloys
+	type = upkeep
+	category = planets
+
+	potential = {
+		always = yes
+	}
+
+	fraction = {
+		weight = 0.2
+	}
+}

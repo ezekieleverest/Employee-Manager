@@ -1,0 +1,171 @@
+early_no_consumer_goods_plan_tweak = {
+	type = early
+
+	income = {
+		energy = 50
+		minerals = 100
+		food = 50
+		alloys = 50
+		unity = 100
+
+		physics_research = 200
+		society_research = 200
+		engineering_research = 200
+
+		exotic_gases = 2
+		volatile_motes = 2
+		rare_crystals = 2
+	}
+
+	focus = {
+		energy = 30
+		minerals = 50
+		food = 15
+		alloys = 25
+		
+		exotic_gases = 0
+		volatile_motes = 0
+		rare_crystals = 0
+	}
+
+	pops = 5000
+	empire_size = 2
+
+	potential = {
+		country_uses_consumer_goods = no
+		country_uses_food = yes
+	}
+
+	ai_weight = {
+		weight = 5
+	}
+}
+
+middle_no_consumer_goods_plan_tweak = {
+	type = middle
+
+	income = {
+		energy = 75
+		minerals = 100
+		food = 50
+		alloys = 70
+		unity = 150
+
+		physics_research = 500
+		society_research = 500
+		engineering_research = 500
+
+		exotic_gases = 3
+		volatile_motes = 3
+		rare_crystals = 3
+	}
+
+	focus = {
+		energy = 30
+		minerals = 50
+		food = 20
+		alloys = 35
+		
+		exotic_gases = 2
+		volatile_motes = 2
+		rare_crystals = 2
+	}
+
+	pops = 5000
+	empire_size = 1.25
+
+	potential = {
+		country_uses_consumer_goods = no
+		country_uses_food = yes
+	}
+
+	ai_weight = {
+		weight = 4
+	}
+}
+
+end_no_consumer_goods_plan_tweak = {
+	type = end
+
+	income = {
+		energy = 300
+		minerals = 100
+		food = 50
+		alloys = 100
+		unity = 300
+
+		physics_research = 1500
+		society_research = 1500
+		engineering_research = 1500
+
+		exotic_gases = 4
+		volatile_motes = 4
+		rare_crystals = 4
+	}
+
+	focus = {
+		energy = 30
+		minerals = 50
+		alloys = 40
+		food = 20
+
+		exotic_gases = 2
+		volatile_motes = 2
+		rare_crystals = 2
+	}
+
+	pops = 5000
+	empire_size = 0.98
+
+	potential = {
+		country_uses_consumer_goods = no
+		country_uses_food = yes
+	}
+
+	ai_weight = {
+		weight = 3
+	}
+}
+
+ultimate_no_consumer_goods_plan_tweak = {
+	type = ultimate
+
+	income = {
+		energy = 300
+		minerals = 100
+		food = 50
+		alloys = 150
+		unity = 600
+
+		physics_research = 10000
+		society_research = 10000
+		engineering_research = 10000
+
+		exotic_gases = 5
+		volatile_motes = 5
+		rare_crystals = 5
+	}
+
+	focus = {
+		energy = 40
+		minerals = 50
+		alloys = 50
+		food = 20
+		
+
+		exotic_gases = 3
+		volatile_motes = 3
+		rare_crystals = 3
+	}
+	pops = 10000
+	empire_size = 0.98
+
+	potential = {
+		country_uses_consumer_goods = no
+		country_uses_food = yes
+	}
+
+	ai_weight = {
+		weight = 2
+	}
+}

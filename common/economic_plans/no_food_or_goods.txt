@@ -1,0 +1,235 @@
+early_no_consumer_goods_or_food_plan_tweak = {
+	type = early
+
+	income = {
+		energy = 50
+		minerals = 50
+		alloys = 50
+		unity = 100
+
+		physics_research = 200
+		society_research = 200
+		engineering_research = 200
+
+		exotic_gases = 2
+		volatile_motes = 2
+		rare_crystals = 2
+	}
+
+	focus = {
+		energy = 30
+		minerals = 30
+		alloys = 25
+		
+		exotic_gases = 0
+		volatile_motes = 0
+		rare_crystals = 0
+	}
+
+	pops = 5000
+	empire_size = 2
+
+	potential = {
+		country_uses_consumer_goods = no
+		country_uses_food = no
+		OR = {
+			has_monthly_income = {
+				resource = energy
+				value < 2
+			}
+			has_monthly_income = {
+				resource = minerals
+				value < 30
+			}
+			NOT = {
+				any_owned_planet = {
+					is_under_colonization = no
+					is_controlled_by = root
+					free_amenities < 4
+					free_jobs < 3
+				}
+			}
+		}
+	}
+
+	ai_weight = {
+		weight = 5
+	}
+}
+
+middle_no_consumer_goods_or_food_plan_tweak = {
+	type = middle
+
+	income = {
+		energy = 50
+		minerals = 75
+		alloys = 75
+		unity = 150
+
+		physics_research = 500
+		society_research = 500
+		engineering_research = 500
+
+		exotic_gases = 3
+		volatile_motes = 3
+		rare_crystals = 3
+	}
+
+	focus = {
+		energy = 30
+		minerals = 25
+		alloys = 32
+		
+		exotic_gases = 2
+		volatile_motes = 2
+		rare_crystals = 2
+	}
+
+	pops = 5000
+	empire_size = 1.25
+
+	potential = {
+		country_uses_consumer_goods = no
+		country_uses_food = no
+		OR = {
+			has_monthly_income = {
+				resource = energy
+				value < 2
+			}
+			has_monthly_income = {
+				resource = minerals
+				value < 30
+			}
+			NOT = {
+				any_owned_planet = {
+					is_under_colonization = no
+					is_controlled_by = root
+					free_amenities < 4
+					free_jobs < 3
+				}
+			}
+		}
+	}
+
+	ai_weight = {
+		weight = 4
+	}
+}
+
+end_no_consumer_goods_or_food_plan_tweak = {
+	type = end
+
+	income = {
+		energy = 50
+		minerals = 100
+		alloys = 80
+		unity = 300
+
+		physics_research = 1500
+		society_research = 1500
+		engineering_research = 1500
+
+		exotic_gases = 4
+		volatile_motes = 4
+		rare_crystals = 4
+	}
+
+	focus = {
+		energy = 30
+		minerals = 25
+		alloys = 40
+
+		exotic_gases = 2
+		volatile_motes = 2
+		rare_crystals = 2
+	}
+
+	pops = 5000
+	empire_size = 0.98
+
+	potential = {
+		country_uses_consumer_goods = no
+		country_uses_food = no
+		OR = {
+			has_monthly_income = {
+				resource = energy
+				value < 2
+			}
+			has_monthly_income = {
+				resource = minerals
+				value < 30
+			}
+			NOT = {
+				any_owned_planet = {
+					is_under_colonization = no
+					is_controlled_by = root
+					free_amenities < 4
+					free_jobs < 3
+				}
+			}
+		}
+	}
+
+	ai_weight = {
+		weight = 3
+	}
+}
+
+ultimate_no_consumer_goods_or_food_plan_tweak = {
+	type = ultimate
+
+	income = {
+		energy = 50
+		minerals = 100
+		alloys = 125
+		unity = 600
+
+		physics_research = 10000
+		society_research = 10000
+		engineering_research = 10000
+
+		exotic_gases = 5
+		volatile_motes = 5
+		rare_crystals = 5
+	}
+
+	focus = {
+		energy = 30
+		minerals = 25
+		alloys = 60
+		
+
+		exotic_gases = 3
+		volatile_motes = 3
+		rare_crystals = 3
+	}
+	pops = 10000
+	empire_size = 0.98
+
+	potential = {
+		country_uses_consumer_goods = no
+		country_uses_food = no
+		OR = {
+			has_monthly_income = {
+				resource = energy
+				value < 2
+			}
+			has_monthly_income = {
+				resource = minerals
+				value < 30
+			}
+			NOT = {
+				any_owned_planet = {
+					is_under_colonization = no
+					is_controlled_by = root
+					free_amenities < 4
+					free_jobs < 3
+				}
+			}
+		}
+	}
+
+	ai_weight = {
+		weight = 2
+	}
+}

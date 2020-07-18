@@ -1,0 +1,228 @@
+# Base AI economic plans
+
+# Early ---------------------------------------
+
+early_servitor_plan = {
+	type = early
+
+	income = {
+		energy = 50
+		minerals = 75
+		food = 25
+		consumer_goods = 25 
+		alloys = 50
+		unity = 50
+
+		physics_research = 200
+		society_research = 200
+		engineering_research = 200
+
+	}
+
+	focus = {
+		energy = 30
+		minerals = 50
+		alloys = 25
+		food = 10
+		consumer_goods = 10
+	}
+
+	pops = 500
+	empire_size = 2
+
+	potential = {
+		has_valid_civic = civic_machine_servitor
+		OR = {
+			has_monthly_income = {
+				resource = energy
+				value < 2
+			}
+			has_monthly_income = {
+				resource = minerals
+				value < 30
+			}
+			NOR = {
+				any_owned_planet = {
+					is_under_colonization = no
+					is_controlled_by = root
+					free_amenities < 4
+					free_jobs < 3
+				}
+				any_owned_pop = {
+					is_unemployed = yes
+					has_citizenship_type = { type = citizenship_organic_trophy }
+				}
+				any_owned_planet = {
+					free_building_slots > 0
+					NOR = { 
+						has_building = building_organic_sanctuary 
+						has_building = building_organic_paradise
+					}
+				}
+			}
+		}
+	}
+
+	ai_weight = {
+		weight = 1
+	}
+}
+
+
+# Middle ----------------------------------------
+
+middle_servitor_plan = {
+	type = middle
+
+	income = {
+		energy = 75
+		minerals = 100
+		food = 25
+		consumer_goods = 25 
+		alloys = 60
+		unity = 150
+
+		physics_research = 500
+		society_research = 500
+		engineering_research = 500
+
+		exotic_gases = 1
+		volatile_motes = 1
+		rare_crystals = 1
+		sr_living_metal = 1
+		sr_zro = 1
+		sr_dark_matter = 1
+	}
+
+	focus = {
+		energy = 30
+		minerals = 50
+		alloys = 30
+		food = 10
+		consumer_goods = 10
+		
+		physics_research = 50
+		society_research = 50
+		engineering_research = 50
+	}
+
+	pops = 1000
+	empire_size = 1.25
+
+	potential = {
+		has_valid_civic = civic_machine_servitor
+		OR = {
+			has_monthly_income = {
+				resource = energy
+				value < 2
+			}
+			has_monthly_income = {
+				resource = minerals
+				value < 30
+			}
+			NOR = {
+				any_owned_planet = {
+					is_under_colonization = no
+					is_controlled_by = root
+					free_amenities < 4
+					free_jobs < 3
+				}
+				any_owned_pop = {
+					is_unemployed = yes
+					has_citizenship_type = { type = citizenship_organic_trophy }
+				}
+				any_owned_planet = {
+					free_building_slots > 0
+					NOR = { 
+						has_building = building_organic_sanctuary 
+						has_building = building_organic_paradise
+					}
+				}
+			}
+		}
+	}
+
+	ai_weight = {
+		weight = 1
+	}
+}
+# End ---------------------------------------
+
+end_servitor_plan = {
+	type = end
+
+	income = {
+		energy = 300
+		minerals = 125
+		food = 50
+		consumer_goods = 50 
+		alloys = 80
+		unity = 300
+
+		physics_research = 1500
+		society_research = 1500
+		engineering_research = 1500
+
+		exotic_gases = 3
+		volatile_motes = 3
+		rare_crystals = 3
+		sr_living_metal = 3
+		sr_zro = 3
+		sr_dark_matter = 3
+	}
+
+	focus = {
+		energy = 50
+		minerals = 50
+		alloys = 40
+		food = 25
+		consumer_goods = 20
+		
+		exotic_gases = 1
+		volatile_motes = 1
+		rare_crystals = 1
+		sr_living_metal = 1
+		sr_zro = 1
+		sr_dark_matter = 1
+	}
+
+	pops = 3000
+	empire_size = 0.98
+
+	potential = {
+		has_valid_civic = civic_machine_servitor
+		OR = {
+			has_monthly_income = {
+				resource = energy
+				value < 2
+			}
+			has_monthly_income = {
+				resource = minerals
+				value < 30
+			}
+			NOR = {
+				any_owned_planet = {
+					is_under_colonization = no
+					is_controlled_by = root
+					free_amenities < 4
+					free_jobs < 3
+				}
+				any_owned_pop = {
+					is_unemployed = yes
+					has_citizenship_type = { type = citizenship_organic_trophy }
+				}
+				any_owned_planet = {
+					free_building_slots > 0
+					NOR = { 
+						has_building = building_organic_sanctuary 
+						has_building = building_organic_paradise
+					}
+				}
+			}
+		}
+	}
+
+	ai_weight = {
+		weight = 1
+	}
+}
